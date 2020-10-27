@@ -2,14 +2,14 @@ package com.zcb.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.retry.annotation.EnableRetry;
 
 @SpringBootApplication
-@EnableEurekaServer
-public class EurekaSecurityServerApplication {
+@EnableRetry  // 重连必须的配置
+public class RibbonServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaSecurityServerApplication.class, args);
+		SpringApplication.run(RibbonServiceApplication.class, args);
 	}
 
 }
