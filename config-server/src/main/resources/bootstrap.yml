@@ -1,0 +1,53 @@
+## root级别的配置项
+#spring:
+#  application:
+#    name: config-server
+#  #  /{label}/{application}-{profile}.yml
+#  cloud:
+#    config:
+#      server:
+#        git: #配置存储配置信息的Git仓库
+#          uri: https://github.com/LazyJoJo/BGC-config-file.git
+#          username: lazyjojo
+#          password: '{cipher}2e7b1170fea4fb5f3cc4d3ac990b6fd5ce28c51538baad6d036843eb69910bea'
+#          skip-ssl-validation: true    #解决ssl报错问题
+#          clone-on-start: true #开启启动时直接从git获取配置
+#          search-paths: config     #对应的目录
+#      label: master
+#
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8001/eureka/
+#
+#
+## 加密用的增强秘钥
+#encrypt:
+#  key: 123123
+server:
+  port: 8901
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git: #配置存储配置信息的Git仓库
+#          uri: https://github.com/LazyJoJo/BGC-config-file.git
+#          username: lazyjojo
+#          password: '{cipher}2e7b1170fea4fb5f3cc4d3ac990b6fd5ce28c51538baad6d036843eb69910bea'
+          uri: https://gitee.com/macrozheng/springcloud-config.git
+          username: macro
+          password: 123456
+          clone-on-start: true #开启启动时直接从git获取配置
+#          search-paths: config
+          skip-ssl-validation: true   # ssl 问题错误解决
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+
+# 加密用的增强秘钥
+encrypt:
+  key: 123123

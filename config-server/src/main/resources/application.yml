@@ -1,0 +1,13 @@
+#server:
+#  port: 8901
+#
+#spring:
+#  security: #配置用户名和密码
+#    user:
+#      name: zcb
+#      password: 123456
+#
+#
+
+
+
